@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './TopNavbar.module.css';
 import SearchInput from './SearchInput';
 import NightMode from './NightMode';
-import openBookIcon from '../assets/open-book.png'; // Adjust the path as per your actual file structure
+import openBookIcon from '../assets/open-book.png';
 
-function BottomNavbar() {
+function topNavbar() {
+
     return (
         <nav className={styles.nav}>
             <div className={styles.leftContainer}>
@@ -20,4 +21,4 @@ function BottomNavbar() {
     );
 }
 
-export default BottomNavbar;
+export default topNavbar;

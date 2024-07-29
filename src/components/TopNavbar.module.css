@@ -1,3 +1,14 @@
+[data-theme="light"] {
+  --bg-color: #76abae;
+  --text-color: #222831;
+  --heading-color: #e2bbe9;
+}
+[data-theme="dark"] {
+  --bg-color: #222831;
+  --text-color: #76abae;
+  --heading-color: #433d8b;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,8 +23,8 @@ body {
   top: 0; /* Position at the top */
   left: 0;
   width: 100%;
-  background-color: rgba(22, 22, 26, 0.785);
-  color: rgb(224, 234, 240);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,9 +1,20 @@
-/* SearchInput.module.css */
+:root {
+  --input-bg-color-light: #008080;
+  --input-text-color-light: #fff;
+  --icon-color-light: #fff;
+  --input-box-shadow-light: none;
+
+  --input-bg-color-dark: #1a2130;
+  --input-text-color-dark: #fff;
+  --icon-color-dark: #fff;
+  --input-box-shadow-dark: 1.5px 1.5px 3px rgba(255, 255, 255, 0.1),
+    -1.5px -1.5px 3px rgba(255, 255, 255, 0.1);
+}
 
 .container {
   position: relative;
   --size-button: 40px;
-  color: white;
+  color: var(--input-text-color-light);
 }
 
 .input {
@@ -11,13 +22,12 @@
   height: var(--size-button);
   font-size: 15px;
   border: none;
-  color: #fff;
+  color: var(--input-text-color-light);
   outline: none;
   width: var(--size-button);
   transition: all ease 0.3s;
-  background-color: #191a1e;
-  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%),
-    inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  background-color: var(--input-bg-color-light);
+  box-shadow: var(--input-box-shadow-light);
   border-radius: 50px;
   cursor: pointer;
 }
@@ -26,8 +36,7 @@
 .input:not(:invalid) {
   width: 200px;
   cursor: text;
-  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
-    inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+  box-shadow: var(--input-box-shadow-light);
 }
 
 .input:focus + .icon,
@@ -49,4 +58,12 @@
 .ionicon {
   width: 100%;
   height: 100%;
+  fill: var(--icon-color-light);
+}
+
+[data-theme="dark"] {
+  --input-bg-color-light: var(--input-bg-color-dark);
+  --input-text-color-light: var(--input-text-color-dark);
+  --icon-color-light: var(--icon-color-dark);
+  --input-box-shadow-light: var(--input-box-shadow-dark);
 }
